@@ -1262,8 +1262,8 @@ int get_cpu_isa_extensions(char* features) {
     return generic_get_cpu_isa_extensions(features);
 }
 
-unsigned long long get_cpu_clockrate(int check, int cpu) {
-    return generic_get_cpu_clockrate(check,cpu);
+unsigned long long get_cpu_clockrate(int cpu) {
+    return generic_get_cpu_clockrate(cpu);
 }
 
 unsigned long long timestamp() {
@@ -1274,8 +1274,8 @@ int num_caches(int cpu) {
     return generic_num_caches(cpu);
 }
 
-int cache_info(int cpu,int id, char* output) {
-    return generic_cache_info(cpu,id,output);
+int cache_info(int cpu,int id, char* output, size_t len) {
+    return generic_cache_info(cpu,id,output,len);
 }
 
 int cache_level(int cpu, int id) {
